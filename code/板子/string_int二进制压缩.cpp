@@ -8,14 +8,6 @@ typedef long long ll;
 const int N = 1e5 + 10;
 int h[N], e[2 * N], ne[N];
 
-// 质数判断
-bool ckp(int x) {
-    if (x <= 1) return false;
-    for (int i = 2; i <= x / i; i++) {
-        if (x % i == 0) return false;
-    }
-    return true;
-}
 
 int ten(string s) {
     int res = 0, len = s.size();

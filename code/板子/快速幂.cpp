@@ -14,18 +14,6 @@ const int N = 1e5 + 10;
 int h[N], e[2 * N], ne[N];
 const int MOD = 1e9 + 7;
 
-long long qpow(long long base, long long exp, long long mod) {
-    long long result = 1;
-    base %= mod; // 确保基小于模
-    while (exp > 0) {
-        if (exp % 2 == 1) {
-            result = (result * base) % mod;
-        }
-        base = (base * base) % mod;
-        exp /= 2;
-    }
-    return result;
-}
 
 
 int fastpow(int x, int y) { // 快速进行幂运算

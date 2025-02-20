@@ -12,7 +12,6 @@ const int N = 1e5 + 10;
 int h[N], e[2 * N], ne[N];
 const int MOD = 1e9 + 7;
 int mul(int x, int y) {return 1LL * x * y % MOD; }
-
 int fact[N], ifact[N];
 
 int fastpow(int x, int y) {
