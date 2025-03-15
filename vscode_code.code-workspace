@@ -8,7 +8,8 @@
 		"files.associations": {
 			"numbers": "cpp",
 			"iostream": "cpp",
-			"cmath": "cpp"
+			"cmath": "cpp",
+			"random": "cpp"
 		}
 	},
 	"launch": {
