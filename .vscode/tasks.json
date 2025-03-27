@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\output\\${fileBasenameNoExtension}.exe && pause",
+                "${fileDirname}\\output\\${fileBasenameNoExtension}.exe",
             ],
             "options": {
                 "cwd": "D:\\mingw64\\bin"
