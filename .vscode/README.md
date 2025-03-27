@@ -20,6 +20,7 @@ curl -x http://127.0.0.1:10809 http://ifconfig.me
 
 
 /*
+Setting.json 文件内容
 颜色配置, 很重要, 调了半天的颜色.
 还有背景图片设置.
 {
@@ -81,9 +82,9 @@ curl -x http://127.0.0.1:10809 http://ifconfig.me
         // 常量
         { "scope": "constant.language", "settings": { "foreground": "#c586c0" } },
         // 变量名
-        { "scope": "variable.other", "settings": { "foreground": "#ABB2BF" } },
+        { "scope": "variable.other.local", "settings": { "foreground": "#7bdcfe" } },
         // 全局变量
-        { "scope": "variable.other.global", "settings": { "foreground": "#ABB2BF" } },
+        { "scope": "variable.other.global", "settings": { "foreground": "#7bdcfe" } },
         // const
         { "scope": "storage", "settings": { "foreground": "#C586C0" } },
         // include
@@ -104,7 +105,7 @@ curl -x http://127.0.0.1:10809 http://ifconfig.me
         // 字符串
         //{ "scope": "string.quoted", "settings": { "foreground": "#90EE90" } },
         // 注释
-        { "scope": "comment.line", "settings": { "foreground": "#5C6370" } },
+        { "scope": "comment.line", "settings": { "foreground": "#6a9955" } },
         // 宏
         { "scope": "entity.name.function.preprocessor", "settings": { "foreground": "#c586c0" } },
         
@@ -134,5 +135,4 @@ curl -x http://127.0.0.1:10809 http://ifconfig.me
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.colorTheme": "One Monokai",
 }
-
 */
