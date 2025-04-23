@@ -17,6 +17,13 @@ curl -x http://127.0.0.1:10809 http://ifconfig.co
 
 curl -x http://127.0.0.1:10809 http://ifconfig.me
 
+9.code Runner插件输出目录配置
+打开 VS Code 设置（Windows 下按 Ctrl+Shift+P，输入并选择 Preferences: Open Settings (JSON)）。
+在打开的 settings.json 中，找到或新增 code-runner.executorMap 项。
+将 "cpp" 对应的命令修改为如下内容:
+        "cpp": "cd $dir; if (!(Test-Path output)) { New-Item -ItemType Directory -Path output } ; g++ $fileName -o output/$fileNameWithoutExt.exe ; ./output/$fileNameWithoutExt.exe",
+
+
 
 
 /*
