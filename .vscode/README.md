@@ -22,6 +22,8 @@ curl -x http://127.0.0.1:10809 http://ifconfig.me
 在打开的 settings.json 中，找到或新增 code-runner.executorMap 项。
 将 "cpp" 对应的命令修改为如下内容:
         "cpp": "cd $dir; if (!(Test-Path output)) { New-Item -ItemType Directory -Path output } ; g++ $fileName -o output/$fileNameWithoutExt.exe ; ./output/$fileNameWithoutExt.exe",
+cpp文件所在路径:D:\vscode_code\code\t1.cpp
+输出目录:D:\vscode_code\code\output
 
 
 
