@@ -1,6 +1,6 @@
 code/*
 .vscode/*
-# .gitignore
+.gitignore
 *.cpp
 *.prob
 *.exe
