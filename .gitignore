@@ -1,0 +1,7 @@
+code/*
+.vscode/*
+# .gitignore
+*.cpp
+*.prob
+*.exe
+*.md
