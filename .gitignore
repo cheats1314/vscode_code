@@ -4,4 +4,4 @@ code/*
 *.cpp
 *.prob
 *.exe
-# *.md
+*.md
