@@ -1,7 +1,6 @@
 # code/*
 # .vscode/*
-# .gitignore
-*.cpp
+# *.cpp
 *.prob
 *.exe
-*.md
+*.txt
