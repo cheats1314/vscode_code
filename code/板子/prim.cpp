@@ -26,13 +26,39 @@ int Dx[] = {0, -1, 0, 1, 1, -1, -1, 1}, Dy[] = {-1, 0, 1, 0, 1, -1, 1, -1};
 #endif
 // 优先队列优化, 复杂度为O()
 void solve() {
-    
-    
+    int n, E;
+    cin >> n >> E;
+    vector<vector<pii>> g(n + 1);
+    while(E--) {
+        int a, b, val;
+        cin >> a >> b >> val;
+        g[a].emplace_back(val, b);
+        g[b].emplace_back(val, a);
+    }
+    vector<int> minDist(n + 1, inf);
+    vector<int> inTree(n + 1, false);
+    priority_queue<pii, vector<pii>, greater<pii>> pq;
+    pq.emplace(inf, 1);
+    while(!pq.empty()) {
+        auto [minval, cur] = pq.top();
+        pq.pop();
+        if (inTree[cur]) continue;
+        inTree[cur] = true;
+        for (auto [val, v] : g[cur]) {
+            if (!inTree[v]) {
+                minDist[v] = min(minDist[v], val);
+                pq.push({minDist[v], v});
+            }
+        }
+    }
+    int res = 0;
+    // OUT(minDist);
+    for (int i = 2; i <= n; ++i) res += minDist[i];
+    cout << res;
 }
-
+ 
 int main() {
     int t = 1;
     while(t--) solve();
     return 0;
 }
-
