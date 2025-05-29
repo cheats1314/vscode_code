@@ -1,6 +1,7 @@
 # code/*
 # .vscode/*
 # *.cpp
+code/.cph
 *.prob
 *.exe
 *.txt
