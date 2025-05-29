@@ -41,7 +41,6 @@ void solve() {
     q.push(1);
     while(!q.empty()) {
         int cur = q.front(); q.pop();
-
         for (auto [val, v] : g[cur]) {
             minDist[v] = min(minDist[v], minDist[cur] + val);
             q.push(v);
