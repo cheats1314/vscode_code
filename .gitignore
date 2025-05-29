@@ -1,8 +1,7 @@
 # code/*
 # .vscode/*
-# *.cpp
 code/.cph
 code/*.cpp
-*.prob
+!code/板子/*.cpp
 *.exe
 *.txt
