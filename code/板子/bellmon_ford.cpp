@@ -40,21 +40,21 @@ void solve() {
         cin >> s >> e >>val;
         g[s].push_back({val, e});
     }
-    vector<int> minDist(n + 1, inf);
-    minDist[1] = 0;
+    vector<int> dist(n + 1, inf);
+    dist[1] = 0;
     
     for (int i = 1; i < n; ++i) {
         // 对每个边都进行松弛
         for (int j = 1; j <= n; ++j) {
-            if (minDist[j] == inf) continue;
+            if (dist[j] == inf) continue;
             for (auto [val, v] : g[j]) {
-                minDist[v] = min(minDist[v], minDist[j] + val);
+                dist[v] = min(dist[v], dist[j] + val);
             }
         }
     }
     
-    if (minDist[n] == inf) cout << "unconnected" << endl;
-    else cout << minDist[n] << endl;
+    if (dist[n] == inf) cout << "unconnected" << endl;
+    else cout << dist[n] << endl;
 }
 
 

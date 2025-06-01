@@ -35,7 +35,7 @@ void solve() {
         g[a].emplace_back(val, b);
         g[b].emplace_back(val, a);
     }
-    vector<int> minDist(n + 1, inf);
+    vector<int> dist(n + 1, inf);
     vector<int> inTree(n + 1, false);
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     pq.emplace(inf, 1);
@@ -46,14 +46,14 @@ void solve() {
         inTree[cur] = true;
         for (auto [val, v] : g[cur]) {
             if (!inTree[v]) {
-                minDist[v] = min(minDist[v], val);
-                pq.push({minDist[v], v});
+                dist[v] = min(dist[v], val);
+                pq.push({dist[v], v});
             }
         }
     }
     int res = 0;
-    // OUT(minDist);
-    for (int i = 2; i <= n; ++i) res += minDist[i];
+    // OUT(dist);
+    for (int i = 2; i <= n; ++i) res += dist[i];
     cout << res;
 }
  

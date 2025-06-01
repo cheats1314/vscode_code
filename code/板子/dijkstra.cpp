@@ -34,24 +34,24 @@ void solve() {
         cin >> s >> e >> v;
         g[s].push_back({v, e});
     }
-    vector<int> minDist(n + 1, inf);
+    vector<int> dist(n + 1, inf);
     vector<bool> us(n + 1, false);
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     pq.push({0, 1});
-    minDist[1] = 0;
+    dist[1] = 0;
     while(!pq.empty()) {
         auto [minval, cur] = pq.top(); pq.pop();
         if (us[cur]) continue;
         us[cur] = true;
         for (auto& it : g[cur]) {
             int v = it.second, val = it.first;
-            if (!us[v] && minDist[v] > minDist[cur] + val) {
-                minDist[v] = minDist[cur] + val;
-                pq.push({minDist[v], v});
+            if (!us[v] && dist[v] > dist[cur] + val) {
+                dist[v] = dist[cur] + val;
+                pq.push({dist[v], v});
             }
         }
     }
-    cout << (minDist[n] == inf ? -1 : minDist[n]);
+    cout << (dist[n] == inf ? -1 : dist[n]);
 }
 
 
