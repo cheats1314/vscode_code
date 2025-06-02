@@ -26,6 +26,8 @@ int Dx[] = {0, -1, 0, 1, 1, -1, -1, 1}, Dy[] = {-1, 0, 1, 0, 1, -1, 1, -1};
 #endif
 
 /*
+题目:
+https://www.acwing.com/problem/content/855/
 起点src, 终点dst, 可以为任意节点
 */
 
