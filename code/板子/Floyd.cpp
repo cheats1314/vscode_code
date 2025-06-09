@@ -27,3 +27,39 @@ ll mul(ll x, ll y) {return (1LL * x * y) % mod; }
 int dx[] = {0, -1, 0, 1}, dy[] = {-1, 0, 1, 0};
 int Dx[] = {0, -1, 0, 1, 1, -1, -1, 1}, Dy[] = {-1, 0, 1, 0, 1, -1, 1, -1};
 #endif
+// 例题:
+// https://kamacoder.com/problempage.php?pid=1155
+
+void solve() {
+    int n, m;
+    cin >> n >> m;
+    viii g(n + 1, vii(n + 1, vi(n + 1, inf)));
+    while(m--) {
+        int a, b, w;
+        cin >> a >> b >> w;
+        g[a][b][0] = w;
+        g[b][a][0] = w;
+    }
+    for (int k = 1; k <= n; k++) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                g[i][j][k] = min(g[i][j][k - 1], g[i][k][k - 1] + g[k][j][k - 1]);
+            }
+        }
+    }
+    int q;
+    cin >> q;
+    while(q--) {
+        int a, b;
+        cin >> a >> b;
+        if (g[a][b][n] == inf) cout << -1 << endl;
+        else cout << g[a][b][n] << endl;
+    }
+}
+
+
+int main() {
+    int t = 1;
+    while(t--) solve();
+    return 0;
+}
