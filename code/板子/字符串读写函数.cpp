@@ -35,7 +35,6 @@ int main() {
        << setw(2) << setfill('0') << day;
     string s = ss.str(); // 转为string类型
     cout << ss.str();
-    
 }
 
 
