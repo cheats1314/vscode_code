@@ -27,8 +27,9 @@ ll mul(ll x, ll y) {return (1LL * x * y) % mod; }
 int dx[] = {0, -1, 0, 1}, dy[] = {-1, 0, 1, 0};
 int Dx[] = {0, -1, 0, 1, 1, -1, -1, 1}, Dy[] = {-1, 0, 1, 0, 1, -1, 1, -1};
 #endif
-
+// 按秩合并的好处就是支持回滚操作, 路径压缩会破坏树的结构
 // 例题: https://www.lanqiao.cn/problems/20139/learning/
+
 int n, m;
 vector<int> father, sz;
 stack<pair<int, int>> road;

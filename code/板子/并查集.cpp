@@ -15,7 +15,7 @@ void init(int size) {
         father[i] = i;
     }
 }
-int find(int u) {  // 返回u的根节点
+int find(int u) {
     return u == father[u] ? u : father[u] = find(father[u]);
 }
 bool same(int a, int b) {
@@ -23,7 +23,7 @@ bool same(int a, int b) {
     b = find(b);
     return a == b;
 }
-void join(int a, int b) {
+void merge(int a, int b) {
     a = find(a);
     b = find(b);
     if (a == b) return;
@@ -32,7 +32,6 @@ void join(int a, int b) {
 
 
 int main() {
-    fast;
     int n, m;
     cin >> n >> m;
     return 0;
