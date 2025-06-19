@@ -59,11 +59,11 @@ try:
 
 
         if v2ray_subscription_url:
-            print('V2Ray 订阅链接:', v2ray_subscription_url)
+            print('V2Ray 订阅链接:\n', v2ray_subscription_url)
         else:
             print('未找到V2Ray订阅链接')
         if clash_subscription_url:
-            print('Clash 订阅链接:', clash_subscription_url)
+            print('Clash 订阅链接:\n', clash_subscription_url)
         else:
             print('未找到Clash订阅链接')
 
